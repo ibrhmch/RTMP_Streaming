@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                background-color: #ccccff;
+            }
+            #container{
+                width: 50%;
+                margin: 10% auto;
+            }
+            .header{
+                margin: 5% auto;
+                text-align: center;
+            }
+            #title{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #description{
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #survey-form{
+                background-color: #666699;
+                padding: 5%;
+                border-radius: 5px;
+                font-family: monospace;
+                font-weight: 400;
+                font-size: x-large;
+            }
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                margin: 15px 0;
+                color:ghostwhite;
+            }
+            .form-control{
+                margin-top: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border-color: transparent;
+                font-family: calibri;
+                font-size: large;
+            }
+            #dropdown{
+                margin-top: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border-color: transparent;
+                font-family: calibri;
+                font-size: large;
+            }
+            #suggestions{
+                border-radius: 3px;
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size:  large;
+            }
+            #submit{
+                margin-top: 10px;
+                background-color: mediumseagreen;
+                padding: 10px;
+                font-family: calibri;
+                color: white;
+                font-size: x-large;
+                border: none;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "container">
+        <header class = "header">
+            <h1 id = "title">Cinema Survey Form</h1>
+            <p id = "description">This form will help us improve.</p>
+        </header>
+        <form id = "survey-form">
+            <div class = "form-group">
+                <label for="name" id = "name-label">Name</label>
+                <input type="text" name="name" id="name" class = "form-control" placeholder="Enter Your Name" required>
+            </div>
+            <div class = "form-group">
+                <label for="email" id = "email-label">Email</label>
+                <input type="email" name="email" id="email" class = "form-control" placeholder="Enter Your Email" required>
+            </div>
+            <div class = "form-group">
+                <label for="number" id = "number-label">Number</label>
+                <input type="number" name="number" id="number" minlength="10" maxlength="13" class = "form-control" placeholder="Enter Your Number">
+            </div>
+            <div class = "form-group">
+                <label for="experience" id = "">How was your experience.</label>
+                <select name="experience" id="dropdown">
+                    <option disabled selected value>Select</option>
+                    <option value="amazing">Amazing</option>
+                    <option value="average">Average</option>
+                    <option value="bad">Bad</option>
+                </select>
+            </div>
+            <div class = "form-group">
+                <p>Would you recommend your friends to make a visit.</p>
+                <label for="radio"><input type="radio" name="radio" class = "input-radio" checked value = "yes">Yes</label>
+                <label for="radio"><input type="radio" name="radio" class = "input-radio" value = "no">No</label>
+            </div>
+            <div class = "form-group">
+                <p>What would you like to see improved.</p>
+                    <label for="like"><input type="checkbox" name = "like" value = "seats">Seats</label>
+                    <label for="like"><input type="checkbox" name = "like" value = "drinks">Drinks</label>
+            </div>
+            <div class = "form-group">
+                <p>Suggestions</p>
+                    <textarea name="suggestions" id="suggestions" cols="30" rows="5" placeholder="Enter your comments here..."></textarea>
+            </div>
+            <div class = "form-group">
+                <button type = "submit" id = "submit">Submit</button>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
